@@ -15,5 +15,5 @@ peer lifecycle chaincode approveformyorg -o $ORDERER_URL --ordererTLSHostnameOve
 cat log.txt
 
 
-peer lifecycle chaincode checkcommitreadiness --channelID $CHANNEL_NAME --name cc --version 1.0 --init-required --sequence 1 --tls true --cafile $ORDERER_CA --output json
+peer lifecycle chaincode checkcommitreadiness --channelID $CHANNEL_NAME --name fabcar --version 1.0 --init-required --sequence 1 --tls true --cafile $ORDERER_CA --output json
 
