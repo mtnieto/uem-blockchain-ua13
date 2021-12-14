@@ -242,27 +242,10 @@ Orderer: &OrdererDefaults
 
     # Orderer Type: The orderer implementation to start
     # Available types are "solo" and "kafka"
-    OrdererType: etcdraft
-    EtcdRaft:
-            Consenters:
-                - Host: orderer0.uem.com
-                  Port: 7050
-                  ClientTLSCert: crypto-config/ordererOrganizations/uem.com/orderers/orderer0.uem.com/tls/server.crt
-                  ServerTLSCert: crypto-config/ordererOrganizations/uem.com/orderers/orderer0.uem.com/tls/server.crt
-                - Host: orderer2.uem.com
-                  Port: 9050
-                  ClientTLSCert: crypto-config/ordererOrganizations/uem.com/orderers/orderer2.uem.com/tls/server.crt
-                  ServerTLSCert: crypto-config/ordererOrganizations/uem.com/orderers/orderer2.uem.com/tls/server.crt
-                  
-                - Host: orderer1.uem.com
-                  Port: 8050
-                  ClientTLSCert: crypto-config/ordererOrganizations/uem.com/orderers/orderer1.uem.com/tls/server.crt
-                  ServerTLSCert: crypto-config/ordererOrganizations/uem.com/orderers/orderer1.uem.com/tls/server.crt
+    OrdererType: solo
     Addresses:
-                - orderer0.uem.com:7050
-                - orderer1.uem.com:8050
-
-                - orderer2.uem.com:9050
+        - orderer0.uem.com:7050
+       
     BatchTimeout: 2s
 
     # Batch Size: Controls the number of messages batched into a block

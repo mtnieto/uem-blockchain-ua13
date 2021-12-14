@@ -12,6 +12,6 @@ CORE_PEER_TLS_CLIENTKEY_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/
 #   --certfile "$CORE_PEER_TLS_CLIENTCERT_FILE" \
 #   --keyfile "$CORE_PEER_TLS_CLIENTKEY_FILE" \
 #   --tls
-peer channel create -o orderer0.uem.com:7050 -c $CHANNEL_NAME -f ./channel-artifacts/channel1.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA >&log.txt 
+peer channel create -o orderer0.uem.com:7050 -c $CHANNEL_NAME -f ./channel-artifacts/channel1.tx  >&log.txt 
 cat log.txt
 

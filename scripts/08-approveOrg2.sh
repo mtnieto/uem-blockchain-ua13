@@ -8,7 +8,7 @@ CORE_PEER_TLS_ENABLED=true
 ORDERER_URL=orderer0.uem.com:7050
 CORE_PEER_TLS_CLIENTCERT_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/uem.com/orderers/orderer0.uem.com/tls/server.crt
 CORE_PEER_TLS_CLIENTKEY_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/uem.com/orderers/orderer0.uem.com/tls/server.key
-export CC_PACKAGE_ID="fabcar:3e39628c8a399776a1617354564aad537fc2425cb27aa4182d69ae10eebfaa31"
+export CC_PACKAGE_ID="fabcar:842748f236c202ec172079d6780fc49e6f938d63c85359ee5fa6e62ee5f6bac6"
 
 peer lifecycle chaincode approveformyorg -o $ORDERER_URL --ordererTLSHostnameOverride orderer0.uem.com  --channelID $CHANNEL_NAME --name fabcar --version 1.0 --init-required --package-id $CC_PACKAGE_ID --sequence 1 --tls true --cafile $ORDERER_CA >&log.txt
 

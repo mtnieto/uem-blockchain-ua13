@@ -10,7 +10,7 @@ CHANNEL_NAME=channel1
 CORE_PEER_TLS_ENABLED=true
 CORE_PEER_TLS_CLIENTCERT_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/uem.com/orderers/orderer0.uem.com/tls/server.crt
 CORE_PEER_TLS_CLIENTKEY_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/uem.com/orderers/orderer0.uem.com/tls/server.key
-export CC_PACKAGE_ID="cc:d1c4fb58cfbba0947fe1ed16877fd94f96c10e9b107cfbaacf1e4f3a19d42e1b"
+export CC_PACKAGE_ID="fabcar:842748f236c202ec172079d6780fc49e6f938d63c85359ee5fa6e62ee5f6bac6"
 
 peer chaincode invoke -o orderer0.uem.com:7050 --isInit --tls true --cafile $ORDERER_CA -C $CHANNEL_NAME -n fabcar --peerAddresses $CORE_PEER_ADDRESS --tlsRootCertFiles $CORE_PEER_TLS_ROOTCERT_FILE -c '{"function":"InitLedger","Args":[]}' --waitForEvent >&log.txt 
 cat log.txt
