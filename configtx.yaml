@@ -214,7 +214,7 @@ Application: &ApplicationDefaults
             Rule: "MAJORITY Admins"
         LifecycleEndorsement: # Esto influye en el approve y commit
             Type: Signature
-            Rule: "OR('org2MSP.peer', 'org1MSP.peer')"
+            Rule: "AND('org2MSP.peer', 'org1MSP.peer')"
         Endorsement:
             Type: Signature
             Rule: "OR('org2MSP.peer', 'org1MSP.peer')"
