@@ -225,9 +225,7 @@ func (s *SmartContract) InitMarble(ctx contractapi.TransactionContextInterface) 
 	err = ctx.GetStub().PutPrivateData("collectionMarbles", colorNameIndexKey, value)
 
 	// ==== Marble saved and indexed. Return success ====
-
 	return nil
-
 }
 
 // ===============================================
