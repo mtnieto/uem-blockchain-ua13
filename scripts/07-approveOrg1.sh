@@ -10,8 +10,8 @@ export CORE_PEER_TLS_CLIENTKEY_FILE=/opt/gopath/src/github.com/hyperledger/fabri
 export CC_PACKAGE_ID="fabcar:0fa0a59359d86aa612ece0e0399ed90c882c8a1ff12fdf5b84587e031bbf6bb2"
 export ORDERER_URL=orderer0.uem.com:7050
 
-peer lifecycle chaincode approveformyorg -o $ORDERER_URL --ordererTLSHostnameOverride orderer0.uem.com  --channelID $CHANNEL_NAME --name fabcar --version 1.0 --init-required --package-id $CC_PACKAGE_ID --sequence 1 --tls true --cafile $ORDERER_CA 
+peer lifecycle chaincode approveformyorg -o $ORDERER_URL --ordererTLSHostnameOverride orderer0.uem.com  --channelID $CHANNEL_NAME --name fabcar --version 1.0  --package-id $CC_PACKAGE_ID --sequence 1 --tls true --cafile $ORDERER_CA 
 
 
-peer lifecycle chaincode checkcommitreadiness --channelID $CHANNEL_NAME --name fabcar --version 1.0 --init-required --sequence 1 --tls true --cafile $ORDERER_CA --output json
+peer lifecycle chaincode checkcommitreadiness --channelID $CHANNEL_NAME --name fabcar --version 1.0  --sequence 1 --tls true --cafile $ORDERER_CA --output json
 

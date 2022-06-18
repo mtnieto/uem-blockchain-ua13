@@ -14,5 +14,5 @@ export CC_PACKAGE_ID="cc:d1c4fb58cfbba0947fe1ed16877fd94f96c10e9b107cfbaacf1e4f3
 
 
 
-peer chaincode invoke -o orderer0.uem.com:7050  --tls true --cafile $ORDERER_CA -C $CHANNEL_NAME -n cc --peerAddresses $CORE_PEER_ADDRESS --tlsRootCertFiles $CORE_PEER_TLS_ROOTCERT_FILE -c '{"Args":["createCar","CAR25", "Mazda", "Mx5", "Maritere"]}' --waitForEvent  >&log.txt 
+peer chaincode invoke -o orderer0.uem.com:7050  --tls true --cafile $ORDERER_CA -C $CHANNEL_NAME -n marbles --peerAddresses $CORE_PEER_ADDRESS --tlsRootCertFiles $CORE_PEER_TLS_ROOTCERT_FILE -c '{"Args":["initMarble","marble1","blue","35","tom"]}' --waitForEvent  >&log.txt 
 cat log.txt

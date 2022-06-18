@@ -10,11 +10,11 @@ export CORE_PEER_TLS_ENABLED=true
 export CORE_PEER_TLS_CLIENTCERT_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/uem.com/orderers/orderer0.uem.com/tls/server.crt
 export CORE_PEER_TLS_CLIENTKEY_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/uem.com/orderers/orderer0.uem.com/tls/server.key
 export ORDERER_URL=orderer0.uem.com:7050
-export CC_PACKAGE_ID="marblesPrivate:cf996a2b5a6dd894f42653984081f86e1bba78d25757e929550ad7044853a97a"
+export CC_PACKAGE_ID="marblesPrivate:baecdbc258e39763a5785ed08e971ded10d90e90a123b86d2383452277a2428e"
 export PATHCOLLECTION=/opt/gopath/src/github.com/hyperledger/fabric/examples/chaincode/go/marbles02_private/collections_config.json
 
 
 
-peer lifecycle chaincode commit -o orderer0.uem.com:7050 --channelID $CHANNEL_NAME --name marblesprivate --version 1.0 --sequence 2  --tls true --cafile $ORDERER_CA --peerAddresses peer0.org1.uem.com:7051 --tlsRootCertFiles $CORE_PEER_TLS_ROOTCERT_FILE  --peerAddresses peer0.org2.uem.com:8051 --tlsRootCertFiles $CORE_PEER_TLS_ROOTCERT_FILE2 --collections-config $PATHCOLLECTION
+peer lifecycle chaincode commit -o orderer0.uem.com:7050 --channelID $CHANNEL_NAME --name marblesprivate --version 1.0 --sequence 1  --tls true --cafile $ORDERER_CA --peerAddresses peer0.org1.uem.com:7051 --tlsRootCertFiles $CORE_PEER_TLS_ROOTCERT_FILE  --peerAddresses peer0.org2.uem.com:8051 --tlsRootCertFiles $CORE_PEER_TLS_ROOTCERT_FILE2 --collections-config $PATHCOLLECTION
 
 cat log.txt

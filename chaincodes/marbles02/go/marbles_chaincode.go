@@ -5,7 +5,7 @@
 // ====CHAINCODE EXECUTION SAMPLES (CLI) ==================
 
 // ==== Invoke marbles ====
-// peer chaincode invoke -C myc1 -n marbles -c '{"Args":["initMarble","marble1","blue","35","tom"]}'
+// peer chaincode invoke -C channel1 -n marbles -c '{"Args":["initMarble","marble1","blue","35","tom"]}'
 // peer chaincode invoke -C myc1 -n marbles -c '{"Args":["initMarble","marble2","red","50","tom"]}'
 // peer chaincode invoke -C myc1 -n marbles -c '{"Args":["initMarble","marble3","blue","70","tom"]}'
 // peer chaincode invoke -C myc1 -n marbles -c '{"Args":["transferMarble","marble2","jerry"]}'

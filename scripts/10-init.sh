@@ -10,4 +10,4 @@ export CORE_PEER_TLS_ENABLED=true
 export CORE_PEER_TLS_CLIENTCERT_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/uem.com/orderers/orderer0.uem.com/tls/server.crt
 export CORE_PEER_TLS_CLIENTKEY_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/uem.com/orderers/orderer0.uem.com/tls/server.key
 
-peer chaincode invoke -o orderer0.uem.com:7050 --isInit --tls true --cafile $ORDERER_CA -C $CHANNEL_NAME -n fabcar --peerAddresses $CORE_PEER_ADDRESS --tlsRootCertFiles $CORE_PEER_TLS_ROOTCERT_FILE -c '{"function":"initLedger","Args":[]}' --waitForEvent 
+peer chaincode invoke -o orderer0.uem.com:7050 --tls true --cafile $ORDERER_CA -C $CHANNEL_NAME -n fabcar --peerAddresses $CORE_PEER_ADDRESS --tlsRootCertFiles $CORE_PEER_TLS_ROOTCERT_FILE -c '{"function":"initLedger","Args":[]}' --waitForEvent 

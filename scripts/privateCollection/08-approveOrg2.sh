@@ -8,10 +8,10 @@ export CORE_PEER_TLS_ENABLED=true
 export ORDERER_URL=orderer0.uem.com:7050
 export CORE_PEER_TLS_CLIENTCERT_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/uem.com/orderers/orderer0.uem.com/tls/server.crt
 export CORE_PEER_TLS_CLIENTKEY_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/uem.com/orderers/orderer0.uem.com/tls/server.key
-export CC_PACKAGE_ID="marblesPrivate:cf996a2b5a6dd894f42653984081f86e1bba78d25757e929550ad7044853a97a"
+export CC_PACKAGE_ID="marblesPrivate:baecdbc258e39763a5785ed08e971ded10d90e90a123b86d2383452277a2428e"
 export PATHCOLLECTION=/opt/gopath/src/github.com/hyperledger/fabric/examples/chaincode/go/marbles02_private/collections_config.json
 
-peer lifecycle chaincode approveformyorg -o $ORDERER_URL --ordererTLSHostnameOverride orderer0.uem.com  --channelID $CHANNEL_NAME --name marblesprivate --version 1.0 --package-id $CC_PACKAGE_ID --sequence 2 --tls true --cafile $ORDERER_CA --collections-config $PATHCOLLECTION
+peer lifecycle chaincode approveformyorg -o $ORDERER_URL --ordererTLSHostnameOverride orderer0.uem.com  --channelID $CHANNEL_NAME --name marblesprivate --version 1.0 --package-id $CC_PACKAGE_ID --sequence 1 --tls true --cafile $ORDERER_CA --collections-config $PATHCOLLECTION
 
 peer lifecycle chaincode checkcommitreadiness --channelID $CHANNEL_NAME --name marblesprivate --version 1.0 --sequence 2  --collections-config $PATHCOLLECTION --tls true --cafile $ORDERER_CA --output json
 
