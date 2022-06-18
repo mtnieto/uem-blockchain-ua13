@@ -186,9 +186,9 @@ case $COMMAND in
         # replacePrivateKey
         ;;
     "start")
-        generateCerts
-        generateChannelArtifacts
-        replacePrivateKey
+        # generateCerts
+        # generateChannelArtifacts
+        # replacePrivateKey
         pullDockerImages
         startNetwork
         ;;
